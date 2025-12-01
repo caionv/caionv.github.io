@@ -3,76 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caio Nicoluzzi Vieira - Caminhos no BCC</title>
+  <title>Caio Nicoluzzi Vieira | IMEsec Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
-    header, footer { background: #f4f4f4; padding: 20px; text-align: center; }
-    nav ul { display: flex; justify-content: center; gap: 20px; padding: 0; margin: 0; list-style: none; }
-    nav a { text-decoration: none; color: #0066cc; }
-    main { padding: 20px; max-width: 800px; margin: auto; }
-    section { margin-bottom: 40px; }
-    h1, h2 { margin-top: 0; }
-    ul, ol { margin-left: 20px; }
-    a { color: #0066cc; }
+    :root {
+      --primary: #0d1b2a;
+      --accent: #0077b6;
+      --light: #e0e1dd;
+      --white: #ffffff;
+      --text: #333;
+    }
+    
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: var(--text); line-height: 1.6; }
+    
+    /* Header & Nav */
+    header { background: var(--primary); color: var(--white); padding: 40px 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { font-size: 1.1rem; color: #a0c4ff; margin-top: 10px; }
+    
+    nav { background: #1b263b; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    nav ul { display: flex; justify-content: center; padding: 0; margin: 0; list-style: none; }
+    nav a { display: block; padding: 15px 20px; color: var(--white); text-decoration: none; font-weight: bold; transition: background 0.3s; }
+    nav a:hover { background: var(--accent); }
+
+    /* Layout */
+    main { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+    section { margin-bottom: 60px; background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    
+    h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-top: 0; }
+    h3 { color: var(--accent); margin-top: 25px; }
+
+    /* Highlights Boxes */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0; }
+    .stat-card { background: #f0f8ff; padding: 20px; border-radius: 8px; text-align: center; border-left: 4px solid var(--accent); }
+    .stat-card strong { display: block; font-size: 2rem; color: var(--primary); }
+    
+    /* Project Cards */
+    .project { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+    .project:last-child { border-bottom: none; }
+    
+    /* Badge */
+    .badge { background: var(--accent); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; vertical-align: middle; }
+
+    /* Links list */
+    ul.links li { margin-bottom: 10px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer { text-align: center; padding: 20px; background: var(--primary); color: var(--light); font-size: 0.9rem; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav ul { flex-direction: column; text-align: center; }
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Caio Nicoluzzi Vieira</h1>
-    <p>NUSP 14562960 – Bacharel em Ciência da Computação, IME-USP</p>
-    <p>Vice-presidente do <strong>IMEsec</strong> | Interesses: Finanças Computacionais, Ciência de Dados e Cibersegurança</p>
+    <p>Bacharelando em Ciência da Computação | IME-USP</p>
+    <p>Vice-Presidente & Diretor Comercial do <strong>IMEsec</strong></p>
   </header>
 
   <nav>
     <ul>
       <li><a href="#sobre">Sobre Mim</a></li>
-      <li><a href="#trilhas">Trilhas</a></li>
-      <li><a href="#planejamento">Planejamento</a></li>
+      <li><a href="#mac0214">MAC0214 - Relatório 2025.2</a></li>
+      <li><a href="#projetos">Projetos & Resultados</a></li>
+      <li><a href="#contato">Contato</a></li>
     </ul>
   </nav>
 
   <main>
     <section id="sobre">
       <h2>Sobre Mim</h2>
-      <p>Olá! Me chamo Caio Nicoluzzi Vieira e estudo Ciência da Computação no IME-USP. Atualmente sou vice-presidente do <strong>IMEsec</strong>, o grupo interno de cibersegurança, onde ajudo a organizar e conduzir iniciativas como o CyberCafe e o Hello, Linux!. Nessas atividades, compartilho conhecimento sobre segurança de sistemas e animo a comunidade a adotar boas práticas. Busco sempre aprender de forma prática, desenvolvendo projetos e participando de eventos relacionados à segurança.</p>
-      <p>Meus principais interesses são:</p>
-      <ul>
-        <li><strong>Finanças Computacionais:</strong> explorar como algoritmos e técnicas de otimização podem melhorar decisões de investimento.</li>
-        <li><strong>Ciência de Dados:</strong> entender todo o fluxo de dados, desde a coleta e engenharia até a análise de informações.</li>
-        <li><strong>Cibersegurança:</strong> estudar criptografia, defesa de redes e métodos para proteger sistemas contra ataques.</li>
-      </ul>
-      <p>Para descobrir meu melhor caminho, vou experimentar disciplinas de cada área e avaliar o aprendizado em prática.</p>
+      <p>Estudante do Instituto de Matemática e Estatística da USP, com foco em Cibersegurança, Finanças Computacionais e Ciência de Dados. </p>
+      <p>Atualmente, lidero a reestruturação comercial e institucional do <strong>IMEsec (IME Security)</strong>, atuando na ponte entre a academia e o mercado de tecnologia. Meu objetivo é democratizar o conhecimento de segurança digital e criar oportunidades de desenvolvimento técnico para estudantes.</p>
     </section>
 
-    <section id="trilhas">
-      <h2>Trilhas & Disciplinas</h2>
-      <p>As trilhas estruturadas pela disciplina dão uma visão geral de algumas áreas, mas não se alinham totalmente com meus interesses. Por isso, ao invés de decidir seguir necesssáriamente alguma trilha especìfica, eu selecionei disciplinas que me permitem explorar diferentes temas antes de escolher minha especialização:</p>
+    <section id="mac0214">
+      <h2>Atividades de Extensão (MAC0214) - 2025.2</h2>
+      <p>Este semestre marcou a consolidação do projeto <strong>IMEsec RELOADED</strong>. Abaixo, apresento o resumo executivo das atividades realizadas sob minha gestão (Vice-Presidência e Diretoria Comercial).</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <strong>116h</strong>
+          <span>Horas Práticas Contabilizadas</span>
+        </div>
+        <div class="stat-card">
+          <strong>200+</strong>
+          <span>Pessoas Impactadas Presencialmente</span>
+        </div>
+        <div class="stat-card">
+          <strong>Google</strong>
+          <span>Parceria Exclusiva Firmada</span>
+        </div>
+      </div>
+
+      <h3>Resumo das Atividades</h3>
+      <p>O trabalho focou em três pilares: <strong>Capacitação Técnica</strong> (aulas e estudos), <strong>Competição</strong> (CTFs) e <strong>Conexão com Mercado</strong> (Eventos e Parcerias). As horas foram distribuídas da seguinte forma:</p>
       <ul>
-        <li><strong>MAC0466 – Teoria dos Jogos Algorítmica</strong><br>Quero entender como modelar interações estratégicas e como essas técnicas se aplicam a sistemas distribuídos.</li>
-        <li><strong>MAC0336 – Criptografia para Segurança de Dados</strong><br>Essa disciplina mostra as bases da criptografia e importantes métodos para proteger dados críticos.</li>
-        <li><strong>MAC0459 – Ciência e Engenharia de Dados</strong><br>Vou aprender a montar pipelines de dados, limpar e transformar grandes volumes para análise.</li>
-        <li><strong>MAC0317 – Processamento de Sinais Digitais</strong><br>Aqui estudo algoritmos para tratar sinais, com aplicações em reconhecimento de padrões e visão computacional.</li>
-        <li><strong>MAC6988 – Cibersegurança</strong><br>Aborda ameaças reais, defesa de redes e políticas de segurança, complementando minha prática no IMEsec.</li>
-        <li><strong>MAC0419 – Métodos de Otimização em Finanças</strong><br>Enfoca técnicas de otimização aplicadas ao mercado financeiro, alinhadas ao meu interesse em finanças.</li>
+        <li><strong>Aulas de Sexta-feira (51h):</strong> Organização e participação em 17 encontros semanais abertos à comunidade, cobrindo Criptografia, Web Hacking e Forense.</li>
+        <li><strong>Competições CTF (35h):</strong> Participação em 7 competições internacionais (ex: WatCTF, SunshineCTF) para aprimoramento técnico prático.</li>
+        <li><strong>Semana CyberCafé (20h):</strong> Planejamento comercial e execução da semana de palestras patrocinada pela Google.</li>
+        <li><strong>Eventos Externos (10h):</strong> Participação no Google AI Research Day.</li>
       </ul>
-      <p>A cada semestre, avalio o conteúdo, faço anotações e registro projetos práticos para decidir quais áreas combinam mais com meu perfil.</p>
+      <p><em>Adicionalmente, foram dedicadas ~49h em gestão estratégica, resultando no planejamento de dois cursos de AEX para 2026.</em></p>
     </section>
 
-    <section id="planejamento">
-      <h2>Planejamento</h2>
-      <p>Meu plano de estudo e carreira está dividido em três fases:</p>
-      <ol>
-        <li><strong>Explorar:</strong> no início, cursar as disciplinas selecionadas e participar de atividades práticas. Vou registrar minhas impressões e comparar experiências.</li>
-        <li><strong>Definir:</strong> após experimentar, escolher uma ou duas áreas que mais me interessarem. Em seguida, buscar projetos, iniciação científica ou estágios para aprofundar o conhecimento.</li>
-        <li><strong>Especializar:</strong> na reta final, focar em um tema específico, desenvolver o Trabalho de Conclusão de Curso (TCC) e, se possível, publicar em eventos ou periódicos.</li>
-      </ol>
-      <p>Esse método me ajuda a manter flexibilidade e adaptar meu percurso conforme descubro novas oportunidades e afinidades.</p>
+    <section id="projetos">
+      <h2>Destaques e Evidências</h2>
+
+      <div class="project">
+        <h3>🚀 Parceria Google & Semana CyberCafé</h3>
+        <p>Como Diretor Comercial, coordenei a negociação que resultou no patrocínio exclusivo da Google para o grupo. O evento ocorreu em novembro de 2025.</p>
+        <ul>
+          <li><strong>Impacto:</strong> 200+ participantes, abertura com Diretor de Engenharia da Google.</li>
+          <li><strong>Temas:</strong> IA Segura, Criptografia Pós-Quântica, Bug Bounty.</li>
+          <li><strong>Evidência:</strong> <a href="https://www.youtube.com/@imesec1800" target="_blank">Assista às palestras no YouTube</a></li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>🚩 Equipe de CTF</h3>
+        <p>Participação ativa em competições globais de segurança (Capture The Flag).</p>
+        <ul>
+          <li><strong>Ranking:</strong> Acompanhe nosso progresso no <a href="https://ctftime.org/team/352176" target="_blank">CTFtime</a>.</li>
+          <li><strong>Foco:</strong> Web Exploitation e Criptografia.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>📚 Aulas Abertas (Open Education)</h3>
+        <p>Ciclo de 17 aulas ministradas para alunos da USP e comunidade externa. Utilizamos material próprio e referências como <em>"Segurança de Dados"</em> (Routo Terada).</p>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato e Links</h2>
+      <ul class="links">
+        <li>📧 <strong>E-mail:</strong> <a href="mailto:caionv@usp.br">caionv@usp.br</a></li>
+        <li>📸 <strong>Instagram do Grupo:</strong> <a href="https://instagram.com/imesec.usp" target="_blank">@imesec.usp</a> (Evidências fotográficas)</li>
+        <li>🌐 <strong>Site do Grupo:</strong> <a href="http://imesec.ime.usp.br" target="_blank">imesec.ime.usp.br</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>Desenvolvido por Caio Nicoluzzi Vieira | <a href="mailto:caionv@usp.br">caionv@usp.br</a></p>
+    <p>&copy; 2025 Caio Nicoluzzi Vieira - Desenvolvido para MAC0214</p>
   </footer>
+
 </body>
 </html>
-
